@@ -3,21 +3,18 @@ import arrow
 class data :
     #Initialisation
     date = None
-    temps = None
     nbrCigJour = None
     nbrCigPaquet = None
     prixPaquet = None
     #Besoin d'etre calcule
     jours = None
-    heure = None
-    minute = None
+    cigEvite = None
     economie = None
     tempsRecupere = None
 
     #Constructeur
-    def __init__(self,date,temps,nbrCigJour,nbrCigPaquet,prixPaquet):
+    def __init__(self,date,nbrCigJour,nbrCigPaquet,prixPaquet):
         self.date = date
-        self.temps = temps
         self.nbrCigJour = nbrCigJour
         self.nbrCigPaquet = nbrCigPaquet
         self.prixPaquet = prixPaquet
@@ -26,12 +23,14 @@ class data :
     #Methodes
     def calculer(self) :
         auj = arrow.now()   #Get date au moment du calcul
-        dateArret = arrow.get(self.date + " " + self.temps, 'YYYY-MM-DD HH:mm') #Get date d'arret
+        dateArret = arrow.get(self.date, 'YYYY-MM-DD') #Get date d'arret
         
-        #Calcul le nombre de jour, heure, minute
-        self.jours = auj.day - dateArret.day
-        self.heure = auj.hour - dateArret.hour
-        self.minute = auj.minute - dateArret.minute
+        #Calcul le nombre de jour
+        annee = (auj - dateArret).days // 365
+        self.jours = (auj - dateArret).days  + (annee * 365)
+
+        #Calcul du nombre de cigarette evite
+        self.cigEvite = self.nbrCigJour * self.jours
 
         #Calcul de l'economie
         nbrJourPaquet = self.nbrCigPaquet / self.nbrCigJour
@@ -43,4 +42,6 @@ class data :
         self.tempsRecupere = int(tempsFumer *  self.nbrCigJour * self.jours / 60)
 
     def toString(self) :
-        print("Vous avez arreter de fumer le " + str(arrow.get(self.date + " " + self.temps, 'YYYY-MM-DD HH:mm')))
+        print("Vous avez arreter de fumer le " + str(arrow.get(self.date, 'YYYY-MM-DD')) 
+              + " et vous avez eviter " + str(self.cigEvite) + " cigarettes!\n"
+              + " cela fait " + str(self.jours) + " jours que vous n'avez pas fumer!")

@@ -1,8 +1,10 @@
-import Data
 import formulaire
-import  tkinter
-import customtkinter
+import pagePrincipal
+import os
 
-formulaire = formulaire.initFormulaire()
-
-formulaire.mainloop()
+if( os.path.exists("data.json")) :  #Donnee deja connu, ouvrir le menu principal
+    pagePrincipal = pagePrincipal.initPagePrincipal()
+    pagePrincipal.mainloop()
+else :                              #Donnee inconnu, ouvrir le formulaire
+    formulaire = formulaire.initFormulaire()
+    formulaire.mainloop()
