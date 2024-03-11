@@ -1,10 +1,9 @@
 import Data
 import pagePrincipal
-import formulaire
-import tkinter
-import customtkinter
 import re #regex
 import json
+import os
+import formulaire
 
 #Appele par le formulaire pour creer un objet Data
 #Verifie les inputs
@@ -40,19 +39,26 @@ def loadData(date, nbrCigJour,nbrCigPaquet, prixPaquet, label, app) :
         print("Le prix d'un paquet doit etre plus grand que 0$.")
         label.configure(text="Le prix d'un paquet doit etre plus grand que 0$.")
         return
-    #Si aucun erreur creer l'objet data
+    #Si aucun erreur creer l'objet data et allez chercher la page principal
     else :    
         data = Data.data(date,nbrCigJour,nbrCigPaquet,prixPaquet)
         data.toString()
         label.configure(text="")
         creerFichier(data)
-        #
-        # Fermer la fenetre courrante(formulaire) et ouvrir une nouvelle fenetre(pagePrincipal)
-        #
         app.destroy()
-        page = pagePrincipal.initPagePrincipal()
+        page = pagePrincipal.initPagePrincipal(data)
         page.mainloop()
 
+#Appele par pagePrinciap pour detruire le fichier data.json et ouvrir la page formulaire
+def restart(app) :
+    if(os.path.exists("data.json")) :
+        os.remove("data.json")
+        app.destroy()
+        page = formulaire.initFormulaire()
+        page.mainloop()
+    else :
+        print("Erreur, fichier non existant")
+    
 #Permet de valider des String grace a un patern Regex
 def validerStringRegex(patern, string) :
     string = string.strip()
@@ -78,3 +84,9 @@ def creerFichier(data) :
     }
     with open('data.json', 'w') as f :
         json.dump(dict,f)
+
+#Retourne un objet data creer a partir des informations dans le fichier data.json
+def loadDataStart() :
+    with open('data.json', 'r') as fichier :
+        dict = json.load(fichier)
+    return Data.data(dict['date'],dict['nbrCigJour'],dict['nbrCigPaquet'],dict['prixPaquet'])

@@ -36,38 +36,38 @@ def initFormulaire() :
     expLabel.pack(pady = 20)
 
     #Label and input pour la date
-    date = tkinter.StringVar(value="2024-02-10")
-    labelDate = customtkinter.CTkLabel(app, text="Date d'arret YY-MM-DD", font=("Helvetica", 14, "bold"))
+    date = tkinter.StringVar()
+    labelDate = customtkinter.CTkLabel(app, text="Date d'arret YYYY-MM-DD", font=("Helvetica", 14, "bold"))
     labelDate.configure(bg_color=BACKGROUND_COLOR)
     labelDate.pack()
-    inputDate = customtkinter.CTkEntry(app, width=250, height=25, textvariable=date)
+    inputDate = customtkinter.CTkEntry(app, corner_radius=10 , width=250, height=25, textvariable=date)
     inputDate.configure(fg_color=WHITE, text_color=BLACK, border_color= BLACK , bg_color=BACKGROUND_COLOR)
     inputDate.pack(pady=5)
 
     #Label and input pour nombre de cigarette par jour
-    NbrCigJour = tkinter.IntVar(value=3)
-    labelNbrCigJour = customtkinter.CTkLabel(app, text="Nombre de cigarette par jour", font=("Helvetica", 14, "bold"))
+    NbrCigJour = tkinter.IntVar()
+    labelNbrCigJour = customtkinter.CTkLabel(app, text="Nombre de cigarette par jour X", font=("Helvetica", 14, "bold"))
     labelNbrCigJour.configure(bg_color=BACKGROUND_COLOR)
     labelNbrCigJour.pack()
-    inputNbrCigJour = customtkinter.CTkEntry(app, width=250, height=25, textvariable=NbrCigJour)
+    inputNbrCigJour = customtkinter.CTkEntry(app, corner_radius=10, width=250, height=25, textvariable=NbrCigJour)
     inputNbrCigJour.configure(fg_color=WHITE, text_color=BLACK, border_color= BLACK , bg_color=BACKGROUND_COLOR)
     inputNbrCigJour.pack(pady=5)
 
     #Label and input pour nombre de cigarette par paquet
-    nbrCigPaquet = tkinter.IntVar(value=8)
-    labelNbrCigPaquet = customtkinter.CTkLabel(app, text="Nombre de cigarette par paquet", font=("Helvetica", 14, "bold"))
+    nbrCigPaquet = tkinter.IntVar()
+    labelNbrCigPaquet = customtkinter.CTkLabel(app, text="Nombre de cigarette par paquet X", font=("Helvetica", 14, "bold"))
     labelNbrCigPaquet.configure(bg_color=BACKGROUND_COLOR)
     labelNbrCigPaquet.pack()
-    inputNbrCigPaquet = customtkinter.CTkEntry(app, width=250, height=25, textvariable = nbrCigPaquet)
+    inputNbrCigPaquet = customtkinter.CTkEntry(app, corner_radius=10, width=250, height=25, textvariable = nbrCigPaquet)
     inputNbrCigPaquet.configure(fg_color=WHITE, text_color=BLACK, border_color= BLACK , bg_color=BACKGROUND_COLOR)
     inputNbrCigPaquet.pack(pady=5)
 
     #Label and input pour le prix du paquet
-    prixPaquet = tkinter.IntVar(value=19)
-    labelPrixPaquet = customtkinter.CTkLabel(app, text="Prix du paquet", font=("Helvetica", 14, "bold"))
+    prixPaquet = tkinter.IntVar()
+    labelPrixPaquet = customtkinter.CTkLabel(app, text="Prix du paquet X", font=("Helvetica", 14, "bold"))
     labelPrixPaquet.configure(bg_color=BACKGROUND_COLOR)
     labelPrixPaquet.pack()
-    inputPrixPaquet = customtkinter.CTkEntry(app, width=250, height=25, textvariable=prixPaquet)
+    inputPrixPaquet = customtkinter.CTkEntry(app, corner_radius=10, width=250, height=25, textvariable=prixPaquet)
     inputPrixPaquet.configure(fg_color=WHITE, text_color=BLACK, border_color= BLACK , bg_color=BACKGROUND_COLOR)
     inputPrixPaquet.pack(pady=5)
 
