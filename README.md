@@ -5,15 +5,24 @@ SMOQUIT
 Simple application GUI sur python permettant d'afficher de l'information en lien avec l'arrêt tabagique. 
 L'utilisateur entre de l'information en lien avec la date et ces habitudes de vie face à la cigarette.
 L'application permet d'afficher plusieurs informations :
-- Le nombre de jours sans cigarette
-- Le nombre de cigarette évité
-- Les economies effectué
-- Le temps gagnée à ne pas fumer
+- Le nombre de jours sans cigarette (x)
+- Le nombre de cigarette évité (x)
+- Les economies effectué (x)
+- Le temps gagnée à ne pas fumer (x)
+- Des astuces (Abandonné)
 
 -- Librairie --
 
-La partie GUI est fait grâce à des librairies tkinter et tkintercustom.
-Utilisation de la librairie Arrow pour pouvoir effectuer des calculs avec les dates.
+GUI 
+- tkinter
+- tkintercustom.
+DATE
+- Arrow
+IMAGE
+- Pillow
+AUTRE
+- json
+- Regex
 
 -- Inspiration --
 
@@ -26,3 +35,8 @@ Création de l'UI sur Lunacy lors de la phases de conception.
 
 https://github.com/Thevaulthunter0/SMOQUIT/assets/119818660/d3c2cb91-658d-464d-a2e1-846e5654d7a3
 
+--UI fin--
+
+Mon approche de la librairie customTkinter et tkinter était complétement éronné donc la possibilité de bien
+positionner m'aurais demandé une refonte de l'application au complet. Donc, j'ai fini l'application sans pousser
+la propreté et le placement des éléments UI. Sera corrigé dans les programmes futures.
