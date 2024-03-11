@@ -28,7 +28,8 @@ AUTRE
 -- Utilisation --  
 Si vous lancer l'application pour la première fois, une page formulaire va créer un fichier 'data.json'
 pour sauvegarder les informations. Lors de la prochaine ouverture l'application lancera la page principal
-étant donné que le fichier data.json sera créé.
+étant donné que le fichier data.json sera créé.     
+Pour lancer l'application, dans un terminal : $py Main.py
 
 -- Inspiration --  
 Grandement inspirée de l'application QuitNow. https://quitnow.app/en#QuitNow
