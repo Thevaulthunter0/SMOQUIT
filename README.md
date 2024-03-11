@@ -31,15 +31,15 @@ AUTRE
 
 Grandement inspirée de l'application QuitNow. https://quitnow.app/en#QuitNow
 
--- UI départ --
+-- Maquette UI --
 
-Création de l'UI sur Lunacy lors de la phases de conception.
+Création des maquettes sur Lunacy lors de la phases de conception.
 *Pas dans les plans de recréer à 100%*
 
 https://github.com/Thevaulthunter0/SMOQUIT/assets/119818660/d3c2cb91-658d-464d-a2e1-846e5654d7a3
 
---UI fin--
+--Note de fin--
 
 Mon approche de la librairie customTkinter et tkinter était complétement éronné donc la possibilité de bien
-positionner m'aurais demandé une refonte de l'application au complet. Donc, j'ai fini l'application sans pousser
-la propreté et le placement des éléments UI. Sera corrigé dans les programmes futures.
+positionner m'aurais demandé une refonte complet de l'application(UI). Donc, j'ai fini l'application sans pousser
+le placement des éléments UI. Sera corrigé dans les programmes futures.
