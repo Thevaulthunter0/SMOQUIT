@@ -16,10 +16,13 @@ L'application permet d'afficher plusieurs informations :
 GUI 
 - tkinter
 - tkintercustom.
+  
 DATE
 - Arrow
+  
 IMAGE
 - Pillow
+  
 AUTRE
 - json
 - Regex
