@@ -1,7 +1,6 @@
 SMOQUIT
 
--- Resumer --
-
+-- Resumer --  
 Simple application GUI sur python permettant d'afficher de l'information en lien avec l'arrêt tabagique. 
 L'utilisateur entre de l'information en lien avec la date et ces habitudes de vie face à la cigarette.
 L'application permet d'afficher plusieurs informations :
@@ -11,8 +10,7 @@ L'application permet d'afficher plusieurs informations :
 - Le temps gagnée à ne pas fumer (x)
 - Des astuces (Abandonné)
 
--- Librairie --
-
+-- Librairie --  
 GUI 
 - tkinter
 - tkintercustom.
@@ -27,19 +25,21 @@ AUTRE
 - json
 - Regex
 
--- Inspiration --
+-- Utilisation --  
+Si vous lancer l'application pour la première fois, une page formulaire va créer un fichier 'data.json'
+pour sauvegarder les informations. Lors de la prochaine ouverture l'application lancera la page principal
+étant donné que le fichier data.json sera créé.
 
+-- Inspiration --  
 Grandement inspirée de l'application QuitNow. https://quitnow.app/en#QuitNow
 
--- Maquette UI --
-
+-- Maquette UI --  
 Création des maquettes sur Lunacy lors de la phases de conception.
 *Pas dans les plans de recréer à 100%*
 
 https://github.com/Thevaulthunter0/SMOQUIT/assets/119818660/d3c2cb91-658d-464d-a2e1-846e5654d7a3
 
---Note de fin--
-
+--Note de fin--  
 Mon approche de la librairie customTkinter et tkinter était complétement éronné donc la possibilité de bien
 positionner m'aurais demandé une refonte complet de l'application(UI). Donc, j'ai fini l'application sans pousser
 le placement des éléments UI. Sera corrigé dans les programmes futures.
